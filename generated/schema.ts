@@ -16,9 +16,9 @@ export class ExampleEntity extends Entity {
     super();
     this.set("id", Value.fromString(id));
 
-    this.set("count", Value.fromBigInt(BigInt.zero()));
     this.set("user", Value.fromBytes(Bytes.empty()));
     this.set("pid", Value.fromBigInt(BigInt.zero()));
+    this.set("totalStake", Value.fromBigInt(BigInt.zero()));
   }
 
   save(): void {
@@ -46,15 +46,6 @@ export class ExampleEntity extends Entity {
     this.set("id", Value.fromString(value));
   }
 
-  get count(): BigInt {
-    let value = this.get("count");
-    return value!.toBigInt();
-  }
-
-  set count(value: BigInt) {
-    this.set("count", Value.fromBigInt(value));
-  }
-
   get user(): Bytes {
     let value = this.get("user");
     return value!.toBytes();
@@ -71,5 +62,14 @@ export class ExampleEntity extends Entity {
 
   set pid(value: BigInt) {
     this.set("pid", Value.fromBigInt(value));
+  }
+
+  get totalStake(): BigInt {
+    let value = this.get("totalStake");
+    return value!.toBigInt();
+  }
+
+  set totalStake(value: BigInt) {
+    this.set("totalStake", Value.fromBigInt(value));
   }
 }

@@ -8,6 +8,7 @@ dataSources:
     source:
       address: "0x3e2e82f811C0d269Bea1284d5444d2bE5Be266eC"
       abi: CorgiFarmManager
+      startBlock: 11779785
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
